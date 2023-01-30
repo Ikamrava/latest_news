@@ -8,6 +8,7 @@ type Article={
   source:string
   title:string
   url:string
+  published_at:string
 }
 
 type Pagination = {

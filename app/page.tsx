@@ -1,14 +1,18 @@
 import { catergories } from "../constants"
 import fetchNews from "../lib/fetchNews"
+import NewsList from "./NewsList"
+import { data } from "../res"
 
 
 async function Homepage() {
-  const allnews:NewsResponse = await fetchNews(catergories.join(","))
+  const allnews:NewsResponse = data
+// await fetchNews(catergories.join(","))
 
-  console.log(allnews)
 
   return (
-    <h1>hello</h1>
+    <div>
+      <NewsList news = {allnews}></NewsList>
+    </div>
   )
 }
 

@@ -52,7 +52,7 @@ let graphql = JSON.stringify({
       }
     }
   }`,
-  variables: {"access_key":process.env.API_KEY,"categories":category,"countries":"gb","limit":"30","sort":"published_desc"}
+  variables: {"access_key":process.env.API_KEY,"categories":category,"countries":"gb","limit":"10","sort":"published_desc"}
 })
 
 
@@ -65,17 +65,17 @@ let graphql = JSON.stringify({
 
  const res = await fetch(`https://coburg.stepzen.net/api/ponderous-shrimp/__graphql`,{
     method:"POST",
-    // cache: isDynamic ? "no-cache" : "default",
-    // next:isDynamic?{revalidate:0}:{revalidate:60},
+    cache: isDynamic ? "no-cache" : "default",
+    next:isDynamic?{revalidate:0}:{revalidate:60},
     headers:headers,
     body:graphql
  })
+ 
 
  
 
  const newsResponse = await res.json()
-
- const news = newsResponse.data.myQuery
+ const news = sortNewsByImage(newsResponse.data.myQuery)
  return news
 
 
