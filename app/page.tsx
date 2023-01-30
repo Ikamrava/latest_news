@@ -1,9 +1,15 @@
+import { catergories } from "../constants"
+import fetchNews from "../lib/fetchNews"
 
 
-function page() {
+async function Homepage() {
+  const allnews:NewsResponse = await fetchNews(catergories.join(","))
+
+  console.log(allnews)
+
   return (
-    <div className=' text-lime-700' >Home Page</div>
+    <h1>hello</h1>
   )
 }
 
-export default page
+export default Homepage

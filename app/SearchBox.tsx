@@ -8,16 +8,14 @@ function SearchBox() {
     const router = useRouter()
     
     const submitHandler = (e:FormEvent<HTMLElement>)=>{
-        
-        
         e.preventDefault()
-        if(!input) return
+        if (!input) return
         router.push(`/search?term=${input}`)
 
 
     }
   return (
-    <form action="" className="max-w-6xl mx-auto flex justify-between items-center px-5">
+    <form onSubmit={submitHandler}  className="max-w-6xl mx-auto flex justify-between items-center px-5">
         <input placeholder="Searck Keywords..." type="text"
          className=" w-full h-14 rounder-sm flex-1 placeholder:gray-500 text-gray-500 outline-none
          bg-transparent dark:text-oragnge-400"
@@ -26,7 +24,7 @@ function SearchBox() {
         <button type='submit' 
         className=" text-orange-400 disabled:text-gray-400"
         disabled={!input}
-        onSubmit={submitHandler}
+        
         >Search</button>
     </form>
   )

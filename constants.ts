@@ -4,6 +4,6 @@ export const catergories : Category[]=[
     "general",
     "health",
     "science",
-    "sport",
+    "sports",
     "technology"
 ]
