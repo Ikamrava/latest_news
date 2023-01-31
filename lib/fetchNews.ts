@@ -66,8 +66,8 @@ let graphql = JSON.stringify({
 
  const res = await fetch(`https://coburg.stepzen.net/api/ponderous-shrimp/__graphql`,{
     method:"POST",
-    cache: isDynamic ? "no-cache" : "default",
-    next:isDynamic?{revalidate:0}:{revalidate:60},
+    // cache: isDynamic ? "no-cache" : "default",
+    // next:isDynamic?{revalidate:0}:{revalidate:60},
     headers:headers,
     body:graphql
  })
