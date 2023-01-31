@@ -1,4 +1,6 @@
-import Loading from "../Loading"
+'use client';
+
+import { useSearchParams } from 'next/navigation'
 
 
 type Props = {
@@ -6,7 +8,9 @@ type Props = {
 }
 
 function page(props:Props) {
-   const {searchParams} = props
+
+
+const {searchParams} = props
 
    
   if(searchParams){
