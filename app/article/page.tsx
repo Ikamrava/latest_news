@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation"
-import Article from "../Article"
-import LiveTimeStamp from "../LiveTimeStamp"
+
+
 type Props = {
     searchParams?:Article
 }
