@@ -6,6 +6,7 @@ type Props = {
 
 function page(props:Props) {
    const {searchParams} = props
+
    
   
   return (
