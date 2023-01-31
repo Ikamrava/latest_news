@@ -10,8 +10,9 @@ function SearchBox() {
     const submitHandler = (e:FormEvent<HTMLElement>)=>{
         e.preventDefault()
         if (!input) return
-        router.push(`/search?term=${input}`)
 
+        router.push(`/search?term=${input}`)
+        setInput("")
 
     }
   return (
