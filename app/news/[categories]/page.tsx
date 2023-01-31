@@ -1,4 +1,5 @@
 import React from 'react'
+import { catergories } from '../../../constants'
 import fetchNews from '../../../lib/fetchNews'
 import NewsList from '../../NewsList'
 
@@ -10,7 +11,7 @@ async function NewsCat({params:{categories}}:Props) {
     const news:NewsResponse = await fetchNews(categories)
   return (
     <div>
-      <h1 className=' headerTitle'>{categories}</h1>
+      <h1 className=' headerTitle mb-8'>{categories}</h1>
         <NewsList news={news}/>
     </div>
   )
@@ -19,5 +20,8 @@ async function NewsCat({params:{categories}}:Props) {
 export default NewsCat
 
 export async function generateStaticParams(){
-
+  return catergories.map(cat=>(
+    {
+    categories:cat,
+  }))
 }

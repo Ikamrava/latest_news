@@ -5,8 +5,7 @@ import { data } from "../res"
 
 
 async function Homepage() {
-  const allnews:NewsResponse = data
-// await fetchNews(catergories.join(","))
+  const allnews:NewsResponse = await fetchNews(catergories.join(","))
 
 
   return (

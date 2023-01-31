@@ -1,4 +1,4 @@
-import Image from "next/image"
+import LiveTimeStamp from "./LiveTimeStamp"
 import ReadMore from "./ReadMore"
 type Props={
     article:Article
@@ -21,7 +21,10 @@ function Article({article}:Props) {
                 </section>
                 <footer className="text-sm text-right ml-auto flex space-x-1 pt-5 italic text-gray-500">
                     <p>{article.source} -</p>
-                    <p>{article.published_at}</p>
+                    <p>
+                        <LiveTimeStamp time={article.published_at}/> 
+                        
+                        </p>
                 </footer>
             </div>
             <ReadMore article={article}/>

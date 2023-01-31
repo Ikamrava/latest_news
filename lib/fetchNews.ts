@@ -53,7 +53,7 @@ let graphql = JSON.stringify({
       }
     }
   }`,
-  variables: {"access_key":process.env.API_KEY,"categories":category,"countries":"gb","limit":"10","sort":"published_desc", "keywords":keywords}
+  variables: {"access_key":process.env.API_KEY,"categories":category,"countries":"gb","limit":"100","sort":"published_desc", "keywords":keywords}
 })
 
 
