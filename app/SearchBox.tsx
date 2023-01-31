@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation"
 import { FormEvent, useState } from "react"
 
 function SearchBox() {
+    
     const [input,setInput] = useState("")
     const router = useRouter()
     
