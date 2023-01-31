@@ -11,7 +11,7 @@ async function SearchPage({searchParams}:Props) {
         "general",
          searchParams?.term,
     )
-    console.log(searchParams?.term)
+
   return (
     <div>
         <NewsList news={news}/>
