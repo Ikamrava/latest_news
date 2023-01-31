@@ -1,4 +1,4 @@
-import LiveTimeStamp from "./LiveTimeStamp"
+
 import ReadMore from "./ReadMore"
 type Props={
     article:Article
