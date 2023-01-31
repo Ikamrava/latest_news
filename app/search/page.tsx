@@ -8,8 +8,8 @@ type Props = {
 async function SearchPage({searchParams}:Props) {
     const news:NewsResponse = await fetchNews(
         "general",
-        searchParams?.term,
-        true
+         searchParams?.term,
+         true
     )
   return (
     <div>

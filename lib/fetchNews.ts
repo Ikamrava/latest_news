@@ -23,13 +23,14 @@ let headers:Props = {
 };
 
 let graphql = JSON.stringify({
-  query: `  query myQuery($access_key: String!, $categories: String!, $countries: String, $limit: String, $sort: String) {
+  query: `  query myQuery($access_key: String!, $categories: String!, $countries: String, $limit: String, $sort: String ,$keywords:String) {
     myQuery(
       access_key: $access_key
       categories: $categories
       countries: $countries
       limit: $limit
       sort: $sort
+      keywords:$keywords
       
     ) {
       data {
@@ -52,7 +53,7 @@ let graphql = JSON.stringify({
       }
     }
   }`,
-  variables: {"access_key":process.env.API_KEY,"categories":category,"countries":"gb","limit":"10","sort":"published_desc"}
+  variables: {"access_key":process.env.API_KEY,"categories":category,"countries":"gb","limit":"10","sort":"published_desc", "keywords":keywords}
 })
 
 
