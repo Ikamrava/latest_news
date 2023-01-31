@@ -3,9 +3,7 @@
 import { useSearchParams } from 'next/navigation'
 
 
-type Props = {
-    searchParams?:Article
-}
+
 
 function page() {
 const searchParams = useSearchParams();
