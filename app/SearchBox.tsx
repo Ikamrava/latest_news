@@ -18,7 +18,7 @@ function SearchBox() {
     <form onSubmit={submitHandler}  className="max-w-6xl mx-auto flex justify-between items-center px-5">
         <input placeholder="Searck Keywords..." type="text"
          className=" w-full h-14 rounder-sm flex-1 placeholder:gray-500 text-gray-500 outline-none
-         bg-transparent dark:text-oragnge-400"
+         bg-transparent "
          value={input}
          onChange={(e)=>setInput(e.target.value)} />
         <button type='submit' 
